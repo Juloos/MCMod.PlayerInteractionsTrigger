@@ -79,6 +79,5 @@ public abstract class MultiPlayerGameModeMixin {
         assert this.minecraft.player != null;  // Impossible
         SubGameType.updatePlayerAbilities(this.minecraft.player);
         ci.cancel();
-
     }
 }
