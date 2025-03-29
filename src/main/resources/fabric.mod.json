@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "playerinteractionstrigger",
+    "version": "${version}",
+    "name": "PlayerInteractionsTrigger",
+    "description": "Allow players to disable some of their interaction types to the world",
+    "authors": [
+        "Juloos"
+    ],
+    "contact": {},
+    "license": "MIT",
+    "icon": "assets/playerinteractionstrigger/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "juloos.playerinteractionstrigger.PlayerInteractionsTrigger"
+        ],
+        "client": [
+            "juloos.playerinteractionstrigger.ClientPlayerInteractionsTrigger"
+        ]
+    },
+    "mixins": [
+        "playerinteractionstrigger.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${loader_version}",
+        "fabric": ">=${fabric_version}",
+        "minecraft": ">=${minecraft_version}"
+    },
+    "accessWidener": "playerinteractionstrigger.accesswidener"
+}
