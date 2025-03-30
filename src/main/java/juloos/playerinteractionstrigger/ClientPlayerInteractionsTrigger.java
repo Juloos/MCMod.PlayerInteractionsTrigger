@@ -14,6 +14,7 @@ public class ClientPlayerInteractionsTrigger implements ClientModInitializer {
         Event.initRegistries();
         Event.initCustomPayloadClient();
         ArgumentTypeRegistry.registerArgumentType(ResourceLocation.fromNamespaceAndPath("pit", "sub_game_type"), SubGameType.SubGameModeArgument.class, SingletonArgumentInfo.contextFree(SubGameType.SubGameModeArgument::subGameMode));
+        ArgumentTypeRegistry.registerArgumentType(ResourceLocation.fromNamespaceAndPath("pit", "enum_bool"), InteractCommand.EnumBool.EnumBoolArgument.class, SingletonArgumentInfo.contextFree(InteractCommand.EnumBool.EnumBoolArgument::enumBool));
         CommandRegistrationCallback.EVENT.register((dispatcher, dedicated, environment) -> InteractCommand.register(dispatcher));
     }
 }
